@@ -6,6 +6,7 @@ import os
 import csv
 import pdfplumber
 import docx
+import pandas as pd
 
 from logic import load_dataset, cari_jawapan
 
