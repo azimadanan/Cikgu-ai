@@ -6,41 +6,18 @@ import os
 import csv
 import pdfplumber
 import docx
-import openai
 
-from logic import generate_answer, save_interaction
+from logic import load_dataset, cari_jawapan
 
-# ---------- CONFIG & HEADER ----------
+# ---------- CONFIG ----------
 st.set_page_config(page_title="Cikgu-ai", layout="centered")
 st.title("📘 Cikgu-ai")
 st.subheader("AI Pendidikan Gaya Guru Malaysia 🇲🇾")
 
 # ---------- PILIH GAYA GURU ----------
-style = st.selectbox(
-    "Pilih gaya jawapan guru:",
-    ("Santai", "Tegas", "Formal")
-)
+style = st.selectbox("Pilih gaya jawapan guru:", ("Santai", "Tegas", "Formal"))
 
-
-
-# ---------- FUNGSI JAWAPAN (SIMULASI) ----------
-def generate_dummy_answer(q, style):
-    if style == "Santai":
-        return f"Ok adik, senang je. Fotosintesis tu proses tumbuhan buat makanan guna cahaya matahari. 🌞"
-    elif style == "Tegas":
-        return f"Jawapan: Fotosintesis ialah proses sintesis makanan dalam tumbuhan melalui cahaya matahari. Ini asas penting."
-    else:  # Formal
-        return f"Fotosintesis merupakan satu proses di mana tumbuhan hijau menghasilkan makanan menggunakan cahaya matahari, air dan karbon dioksida."
-
-# ---------- FUNGSI LOG INTERAKSI ----------
-def log_interaction(question, answer, style):
-    os.makedirs("data/logs", exist_ok=True)
-    with open("data/logs/interactions.csv", "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        timestamp = datetime.datetime.now().isoformat()
-        writer.writerow([timestamp, style, question, answer])
-
-# ---------- FUNGSI EKSTRAK TEKS DARI FAIL ----------
+# ---------- FUNGSI BACA FAIL ----------
 def extract_text_from_file(uploaded_file):
     if uploaded_file.name.endswith(".pdf"):
         with pdfplumber.open(uploaded_file) as pdf:
@@ -51,23 +28,35 @@ def extract_text_from_file(uploaded_file):
     else:
         text = ""
     return text.strip()
-# INPUT MANUAL
-question = st.text_input("Soalan anda:", placeholder="Contoh: Apa itu fotosintesis?")
 
-# ---------- MUAT NAIK FAIL ----------
+# ---------- FUNGSI SIMPAN LOG ----------
+def simpan_log(soalan, gaya, jawapan):
+    os.makedirs("data/logs", exist_ok=True)
+    with open("data/logs/interactions.csv", mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow([datetime.datetime.now(), soalan, gaya, jawapan])
+
+# ---------- INPUT SOALAN ----------
+question = st.text_input("Soalan anda:", placeholder="Contoh: Apakah itu elektromagnet?")
 uploaded_file = st.file_uploader("Atau muat naik fail (PDF/Word):", type=["pdf", "docx"])
+
+# ---------- LOAD DATASET SEKALI ----------
+df_dataset = load_dataset()
 
 # ---------- BUTANG HANTAR ----------
 if st.button("📝 Hantar"):
-    if not question.strip() and not uploaded_file:
+    final_question = question.strip()
+
+    if uploaded_file:
+        final_question = extract_text_from_file(uploaded_file)
+        st.info("Soalan daripada fail berjaya dibaca.")
+
+    if not final_question:
         st.warning("Sila taip soalan atau muat naik fail.")
     else:
-        final_question = question
-        if uploaded_file:
-            final_question = extract_text_from_file(uploaded_file)
-            st.info("Soalan daripada fail berjaya dibaca.")
-
-        answer = generate_dummy_answer(final_question, style)
+        answer = cari_jawapan(final_question, style, df_dataset)
         st.success(answer)
-        log_interaction(final_question, answer, style)
+        simpan_log(final_question, style, answer)
+
+
 
