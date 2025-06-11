@@ -1,6 +1,7 @@
 # logic.py
 
 import random
+import os 
 import pandas as pd
 # Fungsi untuk preprocess input pelajar
 def preprocess_question(question):
@@ -8,8 +9,9 @@ def preprocess_question(question):
 
 # Fungsi dummy untuk jana jawapan AI
 def generate_answer(question, style="Formal"):
-    processed_q = preprocess_question(question)
-    
+
+    _ = preprocess_question(question)
+
     # Contoh jawapan berdasarkan gaya
     if style == "Santai":
         return f"Ok adik, senang je. Ini jawapannya: {random.choice(dummy_answers)}"
@@ -37,10 +39,10 @@ def save_interaction(question, answer, style, filepath="data/interaksi_log.csv")
         writer = csv.writer(file)
         writer.writerow([question, answer, style])
 
-    import pandas as pd
-
 def load_dataset():
-    return pd.read_csv("dataset/processed_prompts.csv")
+
+    csv_path = os.path.join("datasets", "processed", "processed_prompts.csv")
+    return pd.read_csv("datasets/processed/processed_prompts.csv")
 
 def cari_jawapan(soalan, gaya, df):
     result = df[(df['soalan'].str.lower() == soalan.lower()) & (df['gaya'].str.lower() == gaya.lower())]
