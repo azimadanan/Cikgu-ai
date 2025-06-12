@@ -1,65 +1,51 @@
-"soalan,gaya,jawapan"
-"Apakah itu arus elektrik?,santai,Arus elektrik ni macam air yang mengalir dalam dawai ? ia bawa tenaga elektrik!"
-"Apakah itu arus elektrik?,tegas,Arus elektrik ialah aliran cas elektrik dalam satu litar."
-"Apakah itu arus elektrik?,formal,Arus elektrik merujuk kepada pergerakan zarah bermuatan (biasanya elektron) melalui satu konduktor dalam litar tertutup."
-
-"Apa beza arus ulang alik dan arus terus?,santai,Arus terus (DC) tu gerak satu arah je, macam air sungai. Arus ulang alik (AC) dia tukar arah, kejap kiri, kejap kanan."
-"Apa beza arus ulang alik dan arus terus?,tegas,Arus terus mengalir dalam satu arah tetap, manakala arus ulang alik berubah arah secara berkala."
-"Apa beza arus ulang alik dan arus terus?,formal,Arus terus ialah aliran cas elektrik dalam satu arah tetap, manakala arus ulang alik ialah aliran cas yang sentiasa berubah arah secara berkala."
-
-"Apakah itu litar selari?,santai,Litar selari tu macam simpang jalan ? kalau satu lampu rosak, yang lain masih menyala!"
-"Apakah itu litar selari?,tegas,Litar selari ialah susunan komponen elektrik di mana setiap komponen mempunyai laluan sendiri."
-"Apakah itu litar selari?,formal,Litar selari merujuk kepada satu jenis litar elektrik di mana komponen-komponen disambungkan dalam cabang yang berasingan, membolehkan arus mengalir melalui lebih daripada satu laluan."
-
-
-"Apakah itu voltan?,santai,Voltan tu macam tekanan yang tolak cas elektrik jalan dalam litar."
-"Apakah itu voltan?,tegas,Voltan ialah beza keupayaan elektrik antara dua titik dalam litar."
-"Apakah itu voltan?,formal,Voltan merujuk kepada perbezaan keupayaan elektrik antara dua titik yang menyebabkan arus mengalir."
-
-"Apakah fungsi mentol dalam litar?,santai,Senang je, mentol tukar tenaga elektrik jadi cahaya supaya kita boleh nampak."
-"Apakah fungsi mentol dalam litar?,tegas,Mentol menukar tenaga elektrik kepada tenaga cahaya."
-"Apakah fungsi mentol dalam litar?,formal,Mentol dalam litar berfungsi menukarkan tenaga elektrik kepada tenaga cahaya dan haba."
-
-"Apakah itu rintangan?,santai,Rintangan tu macam penghalang yang susahkan arus nak lalu."
-"Apakah itu rintangan?,tegas,Rintangan ialah tahap kesukaran aliran arus dalam litar."
-"Apakah itu rintangan?,formal,Rintangan elektrik ialah sifat bahan yang menentang aliran arus elektrik dalam litar."
-
-"Apa yang berlaku jika suis terbuka?,santai,Suis terbuka macam jalan putus, arus tak boleh lalu, jadi lampu tak nyala."
-"Apa yang berlaku jika suis terbuka?,tegas,Suis terbuka menyebabkan litar terputus dan arus tidak mengalir."
-"Apa yang berlaku jika suis terbuka?,formal,Apabila suis dalam keadaan terbuka, litar menjadi tidak lengkap dan aliran arus elektrik terhenti."
-
-"Apakah fungsi fius dalam litar?,santai,Fius ni macam pengawal, kalau arus kuat sangat dia putuskan litar supaya tak rosak."
-"Apakah fungsi fius dalam litar?,tegas,Fius memutuskan litar apabila berlaku lebihan arus."
-"Apakah fungsi fius dalam litar?,formal,Fius ialah alat keselamatan elektrik yang memutuskan litar apabila arus melebihi paras yang dibenarkan."
-
-"Apakah itu tenaga elektrik?,santai,Tenaga elektrik ni yang gerakkan semua alat elektrik kat rumah."
-"Apakah itu tenaga elektrik?,tegas,Tenaga elektrik ialah bentuk tenaga yang digunakan untuk menggerakkan peralatan elektrik."
-"Apakah itu tenaga elektrik?,formal,Tenaga elektrik ialah tenaga yang terhasil daripada pergerakan cas elektrik dan digunakan untuk mengoperasikan peranti elektrik."
-
-"Bagaimana arus mengalir dalam litar?,santai,Arus bergerak dari terminal positif ke negatif bila kita tutup suis."
-"Bagaimana arus mengalir dalam litar?,tegas,Arus mengalir apabila litar lengkap dan suis ditutup."
-"Bagaimana arus mengalir dalam litar?,formal,Arus elektrik mengalir daripada terminal positif ke terminal negatif apabila litar lengkap dan suis berada dalam keadaan tertutup."
-
-"Kenapa mentol menyala dalam litar selari?,santai,Sebab setiap mentol ada jalan sendiri. Kalau satu rosak, yang lain masih boleh jalan!"
-"Kenapa mentol menyala dalam litar selari?,tegas,Setiap komponen dalam litar selari menerima arus tersendiri."
-"Kenapa mentol menyala dalam litar selari?,formal,Dalam litar selari, setiap cabang membenarkan arus mengalir secara bebas ke komponen masing-masing."
-
-"Apakah itu elektromagnet?,santai,Elektromagnet tu besi yang jadi magnet bila arus elektrik lalu kat dawai lilit dia."
-"Apakah itu elektromagnet?,tegas,Elektromagnet ialah besi yang dimagnetkan dengan arus elektrik."
-"Apakah itu elektromagnet?,formal,Elektromagnet ialah satu jenis magnet yang terhasil apabila arus elektrik dialirkan melalui gegelung dawai yang melilit teras besi lembut."
-
-"Apa fungsi suis dalam litar?,santai,Suis tu untuk buka atau tutup jalan arus ? macam on/off untuk elektrik."
-"Apa fungsi suis dalam litar?,tegas,Suis membenarkan atau menghalang aliran arus dalam litar."
-"Apa fungsi suis dalam litar?,formal,Suis ialah komponen dalam litar yang berfungsi untuk melengkapkan atau memutuskan aliran arus elektrik."
-
-"Bagaimana menghasilkan elektromagnet yang kuat?,santai,Senang je! Lilit lebih dawai dan guna arus lebih kuat."
-"Bagaimana menghasilkan elektromagnet yang kuat?,tegas,Elektromagnet kuat dihasilkan dengan menambah bilangan lilitan dan meningkatkan arus."
-"Bagaimana menghasilkan elektromagnet yang kuat?,formal,Kekuatan elektromagnet boleh ditingkatkan dengan meningkatkan bilangan lilitan gegelung, menggunakan arus yang lebih tinggi dan menambah teras besi lembut."
-
-"Apakah itu motor elektrik?,santai,Motor elektrik ni ubah tenaga elektrik jadi tenaga gerak, macam kipas kat rumah."
-"Apakah itu motor elektrik?,tegas,Motor elektrik menukar tenaga elektrik kepada tenaga kinetik."
-"Apakah itu motor elektrik?,formal,Motor elektrik ialah peranti yang berfungsi menukar tenaga elektrik kepada tenaga mekanikal melalui tindakan elektromagnet."
-
-"Kenapa kita guna litar selari di rumah?,santai,Sebab kalau satu lampu rosak, yang lain masih menyala. Tak kacau semua benda."
-"Kenapa kita guna litar selari di rumah?,tegas,Litar selari membolehkan komponen berfungsi secara bebas."
-"Kenapa kita guna litar selari di rumah?,formal,Litar selari digunakan dalam sistem rumah kerana ia membenarkan peralatan berfungsi secara bebas dan menerima voltan yang sama."
+soalan,gaya,jawapan
+Apakah itu tenaga?,formal,Tenaga ialah keupayaan untuk melakukan kerja atau menghasilkan perubahan.
+Apakah itu arus elektrik?,santai,Arus elektrik ni macam air yang mengalir dalam dawai ? ia bawa tenaga elektrik!
+Apakah itu arus elektrik?,tegas,Arus elektrik ialah aliran cas elektrik dalam satu litar.
+Apakah itu arus elektrik?,formal,Arus elektrik merujuk kepada pergerakan zarah bermuatan (biasanya elektron) melalui satu konduktor dalam litar tertutup.
+Apa beza arus ulang alik dan arus terus?,santai,"Arus terus (DC) tu gerak satu arah je, macam air sungai. Arus ulang alik (AC) dia tukar arah, kejap kiri, kejap kanan."
+Apa beza arus ulang alik dan arus terus?,tegas,"Arus terus mengalir dalam satu arah tetap, manakala arus ulang alik berubah arah secara berkala."
+Apa beza arus ulang alik dan arus terus?,formal,"Arus terus ialah aliran cas elektrik dalam satu arah tetap, manakala arus ulang alik ialah aliran cas yang sentiasa berubah arah secara berkala."
+Apakah itu litar selari?,santai,"Litar selari tu macam simpang jalan ? kalau satu lampu rosak, yang lain masih menyala!"
+Apakah itu litar selari?,tegas,Litar selari ialah susunan komponen elektrik di mana setiap komponen mempunyai laluan sendiri.
+Apakah itu litar selari?,formal,"Litar selari merujuk kepada satu jenis litar elektrik di mana komponen-komponen disambungkan dalam cabang yang berasingan, membolehkan arus mengalir melalui lebih daripada satu laluan."
+Apakah itu voltan?,santai,Voltan tu macam tekanan yang tolak cas elektrik jalan dalam litar.
+Apakah itu voltan?,tegas,Voltan ialah beza keupayaan elektrik antara dua titik dalam litar.
+Apakah itu voltan?,formal,Voltan merujuk kepada perbezaan keupayaan elektrik antara dua titik yang menyebabkan arus mengalir.
+Apakah fungsi mentol dalam litar?,santai,"Senang je, mentol tukar tenaga elektrik jadi cahaya supaya kita boleh nampak."
+Apakah fungsi mentol dalam litar?,tegas,Mentol menukar tenaga elektrik kepada tenaga cahaya.
+Apakah fungsi mentol dalam litar?,formal,Mentol dalam litar berfungsi menukarkan tenaga elektrik kepada tenaga cahaya dan haba.
+Apakah itu rintangan?,santai,Rintangan tu macam penghalang yang susahkan arus nak lalu.
+Apakah itu rintangan?,tegas,Rintangan ialah tahap kesukaran aliran arus dalam litar.
+Apakah itu rintangan?,formal,Rintangan elektrik ialah sifat bahan yang menentang aliran arus elektrik dalam litar.
+Apa yang berlaku jika suis terbuka?,santai,"Suis terbuka macam jalan putus, arus tak boleh lalu, jadi lampu tak nyala."
+Apa yang berlaku jika suis terbuka?,tegas,Suis terbuka menyebabkan litar terputus dan arus tidak mengalir.
+Apa yang berlaku jika suis terbuka?,formal,"Apabila suis dalam keadaan terbuka, litar menjadi tidak lengkap dan aliran arus elektrik terhenti."
+Apakah fungsi fius dalam litar?,santai,"Fius ni macam pengawal, kalau arus kuat sangat dia putuskan litar supaya tak rosak."
+Apakah fungsi fius dalam litar?,tegas,Fius memutuskan litar apabila berlaku lebihan arus.
+Apakah fungsi fius dalam litar?,formal,Fius ialah alat keselamatan elektrik yang memutuskan litar apabila arus melebihi paras yang dibenarkan.
+Apakah itu tenaga elektrik?,santai,Tenaga elektrik ni yang gerakkan semua alat elektrik kat rumah.
+Apakah itu tenaga elektrik?,tegas,Tenaga elektrik ialah bentuk tenaga yang digunakan untuk menggerakkan peralatan elektrik.
+Apakah itu tenaga elektrik?,formal,Tenaga elektrik ialah tenaga yang terhasil daripada pergerakan cas elektrik dan digunakan untuk mengoperasikan peranti elektrik.
+Bagaimana arus mengalir dalam litar?,santai,Arus bergerak dari terminal positif ke negatif bila kita tutup suis.
+Bagaimana arus mengalir dalam litar?,tegas,Arus mengalir apabila litar lengkap dan suis ditutup.
+Bagaimana arus mengalir dalam litar?,formal,Arus elektrik mengalir daripada terminal positif ke terminal negatif apabila litar lengkap dan suis berada dalam keadaan tertutup.
+Kenapa mentol menyala dalam litar selari?,santai,"Sebab setiap mentol ada jalan sendiri. Kalau satu rosak, yang lain masih boleh jalan!"
+Kenapa mentol menyala dalam litar selari?,tegas,Setiap komponen dalam litar selari menerima arus tersendiri.
+Kenapa mentol menyala dalam litar selari?,formal,"Dalam litar selari, setiap cabang membenarkan arus mengalir secara bebas ke komponen masing-masing."
+Apakah itu elektromagnet?,santai,Elektromagnet tu besi yang jadi magnet bila arus elektrik lalu kat dawai lilit dia.
+Apakah itu elektromagnet?,tegas,Elektromagnet ialah besi yang dimagnetkan dengan arus elektrik.
+Apakah itu elektromagnet?,formal,Elektromagnet ialah satu jenis magnet yang terhasil apabila arus elektrik dialirkan melalui gegelung dawai yang melilit teras besi lembut.
+Apa fungsi suis dalam litar?,santai,Suis tu untuk buka atau tutup jalan arus ? macam on/off untuk elektrik.
+Apa fungsi suis dalam litar?,tegas,Suis membenarkan atau menghalang aliran arus dalam litar.
+Apa fungsi suis dalam litar?,formal,Suis ialah komponen dalam litar yang berfungsi untuk melengkapkan atau memutuskan aliran arus elektrik.
+Bagaimana menghasilkan elektromagnet yang kuat?,santai,Senang je! Lilit lebih dawai dan guna arus lebih kuat.
+Bagaimana menghasilkan elektromagnet yang kuat?,tegas,Elektromagnet kuat dihasilkan dengan menambah bilangan lilitan dan meningkatkan arus.
+Bagaimana menghasilkan elektromagnet yang kuat?,formal,"Kekuatan elektromagnet boleh ditingkatkan dengan meningkatkan bilangan lilitan gegelung, menggunakan arus yang lebih tinggi dan menambah teras besi lembut."
+Apakah itu motor elektrik?,santai,"Motor elektrik ni ubah tenaga elektrik jadi tenaga gerak, macam kipas kat rumah."
+Apakah itu motor elektrik?,tegas,Motor elektrik menukar tenaga elektrik kepada tenaga kinetik.
+Apakah itu motor elektrik?,formal,Motor elektrik ialah peranti yang berfungsi menukar tenaga elektrik kepada tenaga mekanikal melalui tindakan elektromagnet.
+Kenapa kita guna litar selari di rumah?,santai,"Sebab kalau satu lampu rosak, yang lain masih menyala. Tak kacau semua benda."
+Kenapa kita guna litar selari di rumah?,tegas,Litar selari membolehkan komponen berfungsi secara bebas.
+Kenapa kita guna litar selari di rumah?,formal,Litar selari digunakan dalam sistem rumah kerana ia membenarkan peralatan berfungsi secara bebas dan menerima voltan yang sama.
+Apakah fungsi voltan?,Formal,Voltan berfungsi untuk menggerakkan arus elektrik dalam litar dan memastikan peranti berfungsi dengan baik.
