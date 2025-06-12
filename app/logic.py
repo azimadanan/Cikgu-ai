@@ -61,4 +61,24 @@ def cari_soalan_terdekat(soalan_input, df):
         return row['jawapan']
     else:
         return "Maaf, saya tidak dapat jumpa jawapan yang hampir dengan soalan tersebut."
+# ── UC04: Flag last interaction ──
+def flag_last_interaction(log_path="data/logs/interactions.csv"):
+    """
+    Tandakan baris terakhir dalam log sebagai is_flagged=True
+    """
+    df = pd.read_csv(log_path)
+    last_idx = df.index[-1]
+    df.at[last_idx, 'is_flagged'] = True
+    df.to_csv(log_path, index=False)
 
+def get_weakness_report(log_path="data/logs/interactions.csv"):
+    """
+    Kira berapa kali setiap konsep ditanda salah (is_correct=False)
+    """
+    df = pd.read_csv(log_path)
+    # pastikan ada kolum concept, is_correct
+    report = (df[df["is_correct"] == False]
+              .groupby("concept")
+              .size()
+              .sort_values(ascending=False))
+    return report 

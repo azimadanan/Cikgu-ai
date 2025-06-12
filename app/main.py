@@ -1,14 +1,13 @@
 # app/main.py
 
 import streamlit as st
-import datetime
-import os
-import csv
+import datetime, csv, os
 import pdfplumber
 import docx
 import pandas as pd
 
 from logic import load_dataset, cari_jawapan
+from logic import extract_text_from_file, flag_last_interaction, get_weakness_report
 
 # ---------- CONFIG ----------
 st.set_page_config(page_title="Cikgu-ai", layout="centered")
@@ -30,34 +29,67 @@ def extract_text_from_file(uploaded_file):
         text = ""
     return text.strip()
 
-# ---------- FUNGSI SIMPAN LOG ----------
-def simpan_log(soalan, gaya, jawapan):
-    os.makedirs("data/logs", exist_ok=True)
-    with open("data/logs/interactions.csv", mode='a', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerow([datetime.datetime.now(), soalan, gaya, jawapan])
+# ─── LOG INTERAKSI (UC01 + UC04) ──────────────────────────────────────────────
+def log_interaction(question, concept, style, answer,
+                    is_correct=True, is_flagged=False,
+                    log_path="data/logs/interactions.csv"):
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    with open(log_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            datetime.datetime.now().isoformat(),
+            question,
+            concept,
+            style,            
+            answer,
+            is_correct,
+            is_flagged
+        ])
 
-# ---------- INPUT SOALAN ----------
-question = st.text_input("Soalan anda:", placeholder="Contoh: Apakah itu elektromagnet?")
-uploaded_file = st.file_uploader("Atau muat naik fail (PDF/Word):", type=["pdf", "docx"])
+# ─── TAB: Chat vs Dashboard ─────────────────────────────────────────────────
+tab_chat, tab_guru = st.tabs(["💬 Chat", "📊 Laporan Guru"])
+
+with tab_chat:
+    question = st.text_input("Soalan anda:", placeholder="Contoh: Apakah itu elektromagnet?")
+    uploaded_file = st.file_uploader("Atau muat naik fail (PDF/Word):", type=["pdf", "docx"])
 
 # ---------- LOAD DATASET SEKALI ----------
 df_dataset = load_dataset()
 
 # ---------- BUTANG HANTAR ----------
-if st.button("📝 Hantar"):
-    final_question = question.strip()
+    if st.button("📝 Hantar"):  # UC01 + UC02
+        final = question.strip()
+        if uploaded_file:
+            final = extract_text_from_file(uploaded_file)
+            st.info("Teks berjaya diekstrak daripada fail.")
+        if not final:
+            st.warning("Sila taip soalan atau muat naik fail.")
+        else:
+            ans = cari_jawapan(final, style, df_dataset)
+            # fallback kepada soalan terdekat
+            if not ans:
+                from logic import cari_soalan_terdekat
+                ans = cari_soalan_terdekat(final, df_dataset)
+            st.success(ans)
+            # simpan log (concept set kepada "Elektrik")
+            log_interaction(final, "Elektrik", style, ans)
 
-    if uploaded_file:
-        final_question = extract_text_from_file(uploaded_file)
-        st.info("Soalan daripada fail berjaya dibaca.")
+            # UC04: butang flag untuk guru
+            if st.session_state.get("role") == "guru":
+               if st.button("🚩 Tandakan Salah"):
+                    flag_last_interaction()
+                    st.warning("Jawapan telah ditandakan.")
 
-    if not final_question:
-        st.warning("Sila taip soalan atau muat naik fail.")
+with tab_guru:  
+    st.header("📊 Laporan Kelemahan Konsep")
+    report = get_weakness_report()
+    if report.empty:
+        st.info("Tiada data salah untuk dipaparkan.")
     else:
-        answer = cari_jawapan(final_question, style, df_dataset)
-        st.success(answer)
-        simpan_log(final_question, style, answer)
+        st.bar_chart(report)
+        st.dataframe(report.reset_index(name="Bil. Salah"))
+
+
 
 
 
